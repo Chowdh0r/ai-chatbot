@@ -1,5 +1,9 @@
 import { redirect } from "next/navigation";
 import { auth } from "@/app/(auth)/auth";
+import { DashboardPanel } from "@/components/dashboard-panel";
+import { DashboardThemeToggle } from "@/components/dashboard-theme-toggle";
+import { SignOutForm } from "@/components/sign-out-form";
+
 import { DashboardThemeToggle } from "@/components/dashboard-theme-toggle";
 import { SignOutForm } from "@/components/sign-out-form";
 
