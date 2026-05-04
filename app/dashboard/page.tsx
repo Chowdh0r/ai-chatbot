@@ -27,6 +27,7 @@ export default async function DashboardPage() {
       <section className="mx-auto flex w-full max-w-5xl flex-col gap-6">
         <header className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-card p-5">
           <div>
+            <h1 className="font-semibold text-2xl">Operations Dashboard</h1>
             <h1 className="font-semibold text-2xl">Node.js Dashboard</h1>
             <p className="text-muted-foreground text-sm">
               Signed in as {session.user.email}
@@ -39,6 +40,47 @@ export default async function DashboardPage() {
             </div>
           </div>
         </header>
+
+        <section className="rounded-xl border border-border bg-card p-5">
+          <h2 className="mb-4 font-medium text-lg">Dashboard Inputs</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <label className="flex flex-col gap-2 text-sm">
+              Full name
+              <input
+                className="rounded-md border border-border bg-background px-3 py-2"
+                name="fullName"
+                placeholder="Jane Doe"
+                type="text"
+              />
+            </label>
+            <label className="flex flex-col gap-2 text-sm">
+              Department
+              <input
+                className="rounded-md border border-border bg-background px-3 py-2"
+                name="department"
+                placeholder="Sales"
+                type="text"
+              />
+            </label>
+            <label className="flex flex-col gap-2 text-sm md:col-span-2">
+              Project title
+              <input
+                className="rounded-md border border-border bg-background px-3 py-2"
+                name="projectTitle"
+                placeholder="Q2 Revenue Dashboard"
+                type="text"
+              />
+            </label>
+            <label className="flex flex-col gap-2 text-sm md:col-span-2">
+              Notes
+              <textarea
+                className="min-h-28 rounded-md border border-border bg-background px-3 py-2"
+                name="notes"
+                placeholder="Add your dashboard notes here..."
+              />
+            </label>
+          </div>
+        </section>
 
         <section className="rounded-xl border border-border bg-card p-5">
           <h2 className="mb-4 font-medium text-lg">Weekly Activity</h2>
